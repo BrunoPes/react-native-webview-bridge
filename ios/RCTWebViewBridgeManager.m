@@ -17,7 +17,6 @@
 #import <React/RCTUIManager.h>
 
 #import <React/UIView+React.h>
-#import <WebKit/WebKit.h>
 
 @interface RCTWebViewBridgeManager () <RCTWebViewBridgeDelegate>
 
@@ -59,12 +58,12 @@ RCT_REMAP_VIEW_PROPERTY(keyboardDisplayRequiresUserAction, _webView.keyboardDisp
   return @{
     @"JSNavigationScheme": RCTJSNavigationScheme,
     @"NavigationType": @{
-      @"LinkClicked": @(WKNavigationTypeLinkActivated),
-      @"FormSubmitted": @(WKNavigationTypeFormSubmitted),
-      @"BackForward": @(WKNavigationTypeBackForward),
-      @"Reload": @(WKNavigationTypeReload),
-      @"FormResubmitted": @(WKNavigationTypeFormResubmitted),
-      @"Other": @(WKNavigationTypeOther)
+      @"LinkClicked": @(UIWebViewNavigationTypeLinkClicked),
+      @"FormSubmitted": @(UIWebViewNavigationTypeFormSubmitted),
+      @"BackForward": @(UIWebViewNavigationTypeBackForward),
+      @"Reload": @(UIWebViewNavigationTypeReload),
+      @"FormResubmitted": @(UIWebViewNavigationTypeFormResubmitted),
+      @"Other": @(UIWebViewNavigationTypeOther)
     },
   };
 }
