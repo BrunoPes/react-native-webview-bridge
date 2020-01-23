@@ -33,8 +33,7 @@
 NSString *const RCTJSNavigationScheme = @"react-js-navigation";
 NSString *const RCTWebViewBridgeSchema = @"wvb";
 
-// runtime trick to remove UIWebview keyboard default toolbar
-// see: http://stackoverflow.com/questions/19033292/ios-7-uiwebview-keyboard-issue/19042279#19042279
+// runtime trick to remove WKWebview keyboard default toolbar
 @interface _SwizzleHelper : NSObject @end
 @implementation _SwizzleHelper
 -(id)inputAccessoryView
@@ -413,7 +412,7 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)aDecoder)
         if (wkWebViewBridgeAvailable()) {
           var event = window.WebViewBridge.__fetch__();
           wkWebViewSend(event);
-        } else { // iOS UIWebview
+        } else {
           window.location = RNWBSchema + '://message' + new Date().getTime();
         }
       }
