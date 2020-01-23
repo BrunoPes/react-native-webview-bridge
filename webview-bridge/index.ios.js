@@ -190,6 +190,7 @@ var WebViewBridge = React.createClass({
         ref={RCT_WEBVIEWBRIDGE_REF}
         key="webViewKey"
         {...props}
+        useWebKit={true}
         source={resolveAssetSource(source)}
         style={webViewStyles}
         onLoadingStart={this.onLoadingStart}

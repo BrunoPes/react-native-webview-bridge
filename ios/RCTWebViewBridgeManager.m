@@ -58,12 +58,12 @@ RCT_REMAP_VIEW_PROPERTY(keyboardDisplayRequiresUserAction, _webView.keyboardDisp
   return @{
     @"JSNavigationScheme": RCTJSNavigationScheme,
     @"NavigationType": @{
-      @"LinkClicked": @(UIWebViewNavigationTypeLinkClicked),
-      @"FormSubmitted": @(UIWebViewNavigationTypeFormSubmitted),
-      @"BackForward": @(UIWebViewNavigationTypeBackForward),
-      @"Reload": @(UIWebViewNavigationTypeReload),
-      @"FormResubmitted": @(UIWebViewNavigationTypeFormResubmitted),
-      @"Other": @(UIWebViewNavigationTypeOther)
+      @"LinkClicked": @(WKNavigationTypeLinkActivated),
+      @"FormSubmitted": @(WKNavigationTypeFormSubmitted),
+      @"BackForward": @(WKNavigationTypeBackForward),
+      @"Reload": @(WKNavigationTypeReload),
+      @"FormResubmitted": @(WKNavigationTypeFormResubmitted),
+      @"Other": @(WKNavigationTypeOther)
     },
   };
 }
